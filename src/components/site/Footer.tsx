@@ -29,16 +29,35 @@ export function Footer() {
             </p>
 
             <div className="mt-6 flex gap-3">
-              {[Facebook, Instagram, Youtube].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
+            {[
+              {
+                Icon: Facebook,
+                href: "https://www.facebook.com/giaythuongdinhhochiminh",
+                label: "Facebook Thượng Đình",
+              },
+              {
+                Icon: Instagram,
+                href: "https://www.instagram.com/thuongdinh_footware/",
+                label: "Instagram Thượng Đình",
+              },
+              {
+                Icon: Youtube,
+                href: "https://www.youtube.com/@thuongdinh2026",
+                label: "YouTube Thượng Đình",
+              },
+            ].map(({ Icon, href, label }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all"
+              >
+                <Icon className="h-4 w-4" />
+              </a>
+            ))}
+          </div>
           </div>
 
           {/* Quick links */}
