@@ -8,10 +8,15 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   vite: {
+    server: {
+      host: "0.0.0.0",
+      port: 8080,
+      allowedHosts: true,
+    },
     preview: {
-      allowedHosts: [
-        "thuong-dinh-final-website-production.up.railway.app",
-      ],
+      host: "0.0.0.0",
+      port: 8080,
+      allowedHosts: true,
     },
   },
 });
